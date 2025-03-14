@@ -32,7 +32,7 @@ function validateForm() {
         return false;
     }
 
-    if (!/^\d{2}$/.test(age)) {
+    if (!/^\d{1}$/.test(age)) {
         alert("Age should be a 2-digit number.");
         return false;
     }
