@@ -32,11 +32,6 @@ function validateForm() {
         return false;
     }
 
-    if (!/^\d{2}$/.test(age)) {
-        alert("Age should be a 2-digit number.");
-        return false;
-    }
-
     if (!genderMale && !genderFemale) {
         alert("Please select a gender.");
         return false;
@@ -47,12 +42,7 @@ function validateForm() {
         return false;
     }
 
-    if (address.trim() === "") {
-        alert("Address should not be empty.");
-        return false;
-    }
-
-    
+    localStorage.clear();
     localStorage.setItem('firstName', firstName);
     localStorage.setItem('lastName', lastName);
     localStorage.setItem('email', email);
