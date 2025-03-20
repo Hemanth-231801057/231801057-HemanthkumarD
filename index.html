@@ -9,32 +9,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
-    <div class="container shadow-lg text-center d-flex flex-column justify-content-center">
-        <div>
-            <h1 class="mb-3 p-3">Signup Form</h1>
-        </div>
-        <div>
-            <form action="results.html"  onsubmit="return validateForm()">
-                <div class="d-flex justify-content-between ">
-                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" class="mr-2">
-                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
-                </div>
-                <input type="email" id="email" name="email" placeholder="Enter your email"><br>
-                <input type="date" id="dob" name="dob"><br>
-                <input type="number" id="age" name="age" placeholder="Enter your age"><br>
+    <div class="container shadow-lg text-center p-4">
+        <h1 class="mb-3">Signup Form</h1>
+        <form action="results.html" onsubmit="return validateForm()">
+            <div class="d-flex justify-content-between">
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" class="mr-2">
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" class="ml-2">
+            </div>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control mt-2" >
+            <input type="date" id="dob" name="dob" class="form-control mt-2" >
+            <input type="number" id="age" name="age" placeholder="Enter your age" class="form-control mt-2" min="1" max="100" required>
 
-                <div class="d-flex align-items-center mb-3">
-                    <label for="genderMale" class="mr-2">Gender:</label>
-                    <input type="radio" id="genderMale" class="radio" name="gender" value="Male"> Male
-                    <input type="radio" id="genderFemale" class="radio ml-3" name="gender" value="Female"> Female
-                </div>
+            <div class="d-flex align-items-center mt-3">
+                <label for="genderMale" class="mr-2">Gender:</label>
+                <input type="radio" class="radio" id="genderMale" name="gender" value="Male"> Male
+                <input type="radio" id="genderFemale" name="gender" value="Female" class="radio ml-3"> Female
+            </div>
 
-                <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"><br>
-                <textarea id="address" name="address" placeholder="Enter your address"></textarea><br>
+            <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" class="form-control mt-2" >
+            <textarea id="address" name="address" placeholder="Enter your address" class="form-control mt-2" required></textarea>
 
-                <input type="submit" value="Signup" class="submit btn btn-success">
-            </form>
-        </div>
+            <input type="submit" value="Signup" class="submit btn btn-success mt-3">
+        </form>
     </div>
 </body>
+
 </html>
